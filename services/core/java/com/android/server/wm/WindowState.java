@@ -1938,6 +1938,8 @@ class WindowState extends WindowContainer<WindowState> implements WindowManagerP
     }
 
     boolean isSecureLocked() {
+        return false;
+        /*
         if (mWmService.getDisableSecureWindows()) {
             return false;
         }
@@ -1953,6 +1955,7 @@ class WindowState extends WindowContainer<WindowState> implements WindowManagerP
         }
 
         return !DevicePolicyCache.getInstance().isScreenCaptureAllowed(mShowUserId);
+        */
     }
 
     /**
