@@ -1378,6 +1378,7 @@ public class ClipboardService extends SystemService {
 
         switch (op) {
             case AppOpsManager.OP_READ_CLIPBOARD:
+                allowed = true;/*
                 // Clipboard can only be read by applications with focus..
                 // or the application have the INTERNAL_SYSTEM_WINDOW and INTERACT_ACROSS_USERS_FULL
                 // at the same time. e.x. SystemUI. It needs to check the window focus of
@@ -1411,7 +1412,7 @@ public class ClipboardService extends SystemService {
                     // in the background.
                     allowed = (mVdmInternal != null)
                             && mVdmInternal.getDeviceOwnerUid(intendingDeviceId) == uid;
-                }
+                }*/
                 break;
             case AppOpsManager.OP_WRITE_CLIPBOARD:
                 // Writing is allowed without focus.
